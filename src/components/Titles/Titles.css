@@ -1,0 +1,81 @@
+.titles-container{
+  width: 96%;
+  background-color: var(--container-dark-color);
+  height: 115px;
+  border-radius: 15px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: var(--Headings-text);
+  /* margin: 20px 0; */
+}
+
+.titles-container h1{
+    color:#484848;
+    font-size: 48px;
+    cursor: pointer;
+
+}
+.coming-soon{
+    /* background: linear-gradient(90deg, var(--Gradient3-color) 0%, var(--Buttons-color) 100%); */
+    background-color: var(--Buttons-color);
+    border-radius: 12px;
+    width: 100px;
+    height: 19px;
+    font-size: 15px;
+    color: #9089DC;
+    text-align: center;
+}
+.titles-container div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+}
+
+.titles-container div {
+  position: relative;
+}
+
+.titles-container div:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 60px;
+  width: 1px;
+  background-color: #B9B9B9;
+}
+/* .titles-container div {
+    position: relative;
+    height: 48px;
+}
+  
+  .titles-container div:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50%;
+    height: 100%;
+    width: 1px;
+    background-color: #B9B9B9;
+  } */
+  
+  .titles-container h1.active {
+    color: white; /* Change the style for the active state as needed */
+  }
+
+  @media screen and (max-width:1500px){
+    .titles-container h1{
+            font-size: 30px;
+    }
+    
+}
+@media screen and (max-width:950px){
+  .titles-container h1{
+          font-size: 20px;
+  }
+  
+}

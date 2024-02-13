@@ -156,7 +156,7 @@ const Content = () => {
           <h1 className="title-filters">Filters</h1>
           <form className="form">
             <div className="parent-dropdown-list">
-              <label>Industry</label>
+              <label htmlFor="ddlProducts">Industry</label>
               <div className="drop-down-list">
                 <svg
                   width="20"
@@ -185,7 +185,7 @@ const Content = () => {
             </div>
 
             <div className="parent-dropdown-list">
-              <label>Market Cap</label>
+              <label htmlFor="Market">Market Cap</label>
               <div className="drop-down-list">
                 <svg
                   width="20"
@@ -202,7 +202,7 @@ const Content = () => {
                     stroke-linejoin="round"
                   />
                 </svg>
-                <select disabled className="select-filters">
+                <select id="Market" disabled className="select-filters">
                   <option>Large-cap</option>
                   <option>Meduim-cap</option>
                   <option>Small-cap</option>
@@ -212,7 +212,7 @@ const Content = () => {
             </div>
 
             <div className="parent-dropdown-list">
-              <label>Risk</label>
+              <label htmlFor="Risk">Risk</label>
               <div onClick={openDiv} className="drop-down-list">
                 <svg
                   width="20"
@@ -230,7 +230,7 @@ const Content = () => {
                   />
                 </svg>
                 <div className="select-and-arrow">
-                  <div className="select-filters">
+                  <div id="Risk" className="select-filters">
                     <p> {option}</p>
                   </div>
 
@@ -287,21 +287,22 @@ const Content = () => {
         <div className="top-card-data">
           <div className="titles-icons-top-data">
             <div className="icon-name-data">
-              <FaDollarSign />
-              <p>
-                <FaDollarSign /> TSLA
+              <FaDollarSign className="svg-size"/>
+              <p className="">
+                <FaDollarSign className="special-svg-size"/> 
+                <span>TSLA</span>
               </p>
             </div>
             <div className="icon-name-data">
-              <FaFileContract />
+              <FaFileContract className="svg-size"/>
               <p> 200 Contracts </p>
             </div>
             <div className="icon-name-data">
-              <BsGraphUpArrow />
+              <BsGraphUpArrow className="svg-size"/>
               <p> 12.2% </p>
             </div>
             <div className="icon-name-data">
-              <RiCoinsFill />
+              <RiCoinsFill className="svg-size"/>
               <p>High risk</p>
             </div>
           </div>
@@ -317,7 +318,10 @@ const Content = () => {
         </div>
         <div className="repeated-cards">
           <RepeatedCard />
-          <RepeatedCard /> <RepeatedCard /> <RepeatedCard /> <RepeatedCard />
+          <RepeatedCard />
+           <RepeatedCard /> 
+           <RepeatedCard /> 
+           <RepeatedCard />
         </div>
       </section>
     </main>
